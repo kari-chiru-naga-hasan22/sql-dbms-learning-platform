@@ -76,8 +76,10 @@ export function LessonViewer({ lesson }: LessonViewerProps) {
       case "anatomy-normalization":
         return <AnatomyNormalization />;
       case "nosql-simulator":
+      case "nosql-doc":
         return <NoSqlVisualizer />;
       case "powerbi-dashboard":
+      case "powerbi-chart":
         return <PowerBiVisualizer />;
       case "sql-lab":
       default:

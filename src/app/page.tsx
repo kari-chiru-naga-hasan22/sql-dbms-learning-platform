@@ -23,56 +23,56 @@ export default function Home() {
       desc: "Logarithmic pointer traversal versus sequential page I/O scans.",
       icon: Layers,
       color: "text-accent-brass",
-      route: "/lesson/week-04-module-08-lesson-01",
+      route: "/lesson/week-06/module-01/lesson-02",
     },
     {
       title: "Query Pipeline Engine",
       desc: "AST parsing, catalog resolution, cost optimizer, and Volcano iterators.",
       icon: Cpu,
       color: "text-accent-sage",
-      route: "/lesson/week-04-module-07-lesson-01",
+      route: "/lesson/week-02/module-02/lesson-02",
     },
     {
       title: "Relational JOIN Matcher",
       desc: "Interactive key matching across INNER, LEFT, RIGHT, FULL, and CROSS joins.",
       icon: GitMerge,
       color: "text-accent-orange",
-      route: "/lesson/week-02-module-03-lesson-01",
+      route: "/lesson/week-02/module-01/lesson-01",
     },
     {
       title: "ACID & WAL State Machine",
       desc: "RAM buffer dirty pages, append-only WAL logs, and ARIES crash recovery.",
       icon: ShieldCheck,
       color: "text-accent-brass",
-      route: "/lesson/week-05-module-09-lesson-01",
+      route: "/lesson/week-01/module-02/lesson-04",
     },
     {
       title: "Slotted-Page Storage",
       desc: "8KB block architecture with downward slot pointers and upward tuple payloads.",
       icon: HardDrive,
       color: "text-accent-slate",
-      route: "/lesson/week-05-module-10-lesson-01",
+      route: "/lesson/week-01/module-02/lesson-02",
     },
     {
       title: "Normalization Rig",
       desc: "Decomposition from UNF through 1NF, 2NF, and 3NF to eliminate anomalies.",
       icon: Sparkles,
       color: "text-accent-orange",
-      route: "/lesson/week-03-module-05-lesson-01",
+      route: "/lesson/week-01/module-02/lesson-01",
     },
     {
       title: "MongoDB BSON Simulator",
       desc: "Schema-flexible documents and multi-stage aggregation pipeline transforms.",
       icon: FileJson,
       color: "text-accent-sage",
-      route: "/lesson/week-10-module-17-lesson-01",
+      route: "/lesson/week-02/module-02/lesson-04",
     },
     {
       title: "Power BI & DAX Studio",
       desc: "Star Schema dimensional cross-filtering and live DAX measure calculation.",
       icon: BarChart3,
       color: "text-accent-brass",
-      route: "/lesson/week-09-module-16-lesson-01",
+      route: "/lesson/week-04/module-01/lesson-03",
     },
   ];
 
@@ -96,7 +96,7 @@ export default function Home() {
 
           <div className="flex flex-wrap items-center gap-3">
             <Link
-              href="/lesson/week-01-module-01-lesson-01"
+              href="/lesson/week-01/module-01/lesson-01"
               className="flex items-center gap-2 px-5 py-2.5 bg-ink text-paper text-xs font-mono font-bold rounded-lg hover:bg-ink-muted transition-all shadow-sm"
             >
               Start Course (Lesson 1)
@@ -104,7 +104,7 @@ export default function Home() {
             </Link>
 
             <Link
-              href="/lesson/week-02-module-03-lesson-01"
+              href="/lesson/week-02/module-01/lesson-01"
               className="flex items-center gap-2 px-4 py-2.5 bg-canvas border border-border-warm text-ink text-xs font-mono font-semibold rounded-lg hover:border-ink-muted transition-all"
             >
               <Terminal className="w-3.5 h-3.5 text-accent-orange" />
