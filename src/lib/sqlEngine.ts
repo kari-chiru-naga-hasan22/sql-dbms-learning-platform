@@ -196,9 +196,9 @@ class SqlEngineManager {
           locateFile: (file: string) => `/${file}`,
         });
       } catch (wasmErr) {
-        console.warn("Local sql-wasm.wasm load failed, falling back to CDN:", wasmErr);
+        console.warn("Local wasm load failed, falling back to CDN:", wasmErr);
         this.SQL = await initSqlJs({
-          locateFile: () => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.12.0/sql-wasm.wasm`,
+          locateFile: (file: string) => `https://unpkg.com/sql.js@1.15.0/dist/${file}`,
         });
       }
       this.resetDatabase(this.currentDbType);
