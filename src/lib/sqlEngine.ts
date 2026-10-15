@@ -191,9 +191,16 @@ class SqlEngineManager {
     this.initPromise = (async () => {
       // Dynamic import of sql.js in browser
       const initSqlJs = (await import("sql.js")).default;
-      this.SQL = await initSqlJs({
-        locateFile: () => `/sql-wasm.wasm`,
-      });
+      try {
+        this.SQL = await initSqlJs({
+          locateFile: (file: string) => `/${file}`,
+        });
+      } catch (wasmErr) {
+        console.warn("Local sql-wasm.wasm load failed, falling back to CDN:", wasmErr);
+        this.SQL = await initSqlJs({
+          locateFile: () => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.12.0/sql-wasm.wasm`,
+        });
+      }
       this.resetDatabase(this.currentDbType);
     })();
 

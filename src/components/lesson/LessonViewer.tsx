@@ -273,6 +273,9 @@ export function LessonViewer({ lesson }: LessonViewerProps) {
                               alt={res.filename}
                               className="max-h-full max-w-full object-contain"
                               loading="lazy"
+                              onError={(e) => {
+                                (e.currentTarget.parentElement as HTMLElement).style.display = "none";
+                              }}
                             />
                           </div>
                         </div>
