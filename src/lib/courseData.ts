@@ -15,10 +15,18 @@ export function getWeeksSummary(): WeekSummary[] {
   return course.weeks;
 }
 
+export function normalizeSlug(slug: string): string {
+  if (!slug) return "";
+  return slug
+    .replace(/^\/+|\/+$/g, "")
+    .replace(/[\/\\]+/g, "-")
+    .toLowerCase();
+}
+
 export function getLessonBySlug(slug: string): LessonDetail | undefined {
-  // Normalize slug by removing leading/trailing slashes
-  const cleanSlug = slug.replace(/^\/+|\/+$/g, "");
-  return course.lessons.find((l) => l.slug === cleanSlug);
+  if (!slug) return undefined;
+  const cleanTarget = normalizeSlug(slug);
+  return course.lessons.find((l) => normalizeSlug(l.slug) === cleanTarget);
 }
 
 export function getLessonById(id: number): LessonDetail | undefined {
